@@ -32,7 +32,7 @@ days_to_units(20)
 
 def validate_and_execute():
     try:
-        user_input_number = int(user_input)
+        user_input_number = int(num_of_days_element)
         if user_input_number > 0:
             calculated_value = days_to_units(user_input_number)
             print(calculated_value)
@@ -41,15 +41,19 @@ def validate_and_execute():
         else:
             print("You entered negative value. Please enter correctly")
     except ValueError:
-        print("Dont enter invalid data....think of correcting your input value :-)")
+        print("your input is not a valid number, Don't ruin my program!")
 
 
 user_input = ""
 while user_input != "exit":
-    user_input: str = input("Hwy User, enter a number of days and I will convert it to hours!\n")
-    validate_and_execute()
-    if user_input == "exit":
-        print("You have exited the program. Thank you")
+    user_input = input("Hwy User, enter number of days as comma separated list and I will convert it to hours!\n")
+    print(type(user_input.split(", ")))
+    print(user_input.split(", "))
+    for num_of_days_element in user_input.split(", "):
+        validate_and_execute()
+
+    # if user_input == "exit":
+    #     print("You have exited the program. Thank you")
 
 
 # print(f"20 days are {20 * to_units}  {name_unit}")
