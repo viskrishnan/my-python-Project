@@ -47,9 +47,11 @@ def validate_and_execute():
 user_input = ""
 while user_input != "exit":
     user_input = input("Hwy User, enter number of days as comma separated list and I will convert it to hours!\n")
-    print(type(user_input.split(", ")))
-    print(user_input.split(", "))
-    for num_of_days_element in user_input.split(", "):
+    list_of_days = user_input.split(", ")
+    print(list_of_days)
+    print(set(list_of_days))
+    print(type(set(list_of_days)))
+    for num_of_days_element in set(user_input.split(", ")):
         validate_and_execute()
 
     # if user_input == "exit":
