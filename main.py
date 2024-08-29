@@ -9,6 +9,7 @@ while user_input != "exit":
     print(days_and_unit_dictionary)
     validate_and_execute(days_and_unit_dictionary)
 
+
 # def days_to_units(num_of_days, conversion_unit):
 #     if num_of_days > 0:
 #         return f"{num_of_days} days are {num_of_days * conversion_unit} {name_unit}"
